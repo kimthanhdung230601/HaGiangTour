@@ -1,0 +1,110 @@
+.wraps {
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  min-width: 77rem;
+
+  // justify-content: center;
+  align-items: center;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  border-radius: 1rem;
+   padding: 0 1.7rem;
+  // width: 78rem;
+  .logoWraps {
+    .logoWrapImage {
+      height: 4.16rem;
+      width: 4.75rem;
+      object-fit: cover;
+      margin: 0.913rem 0;
+    }
+  }
+  .subMenu {
+     margin: 0 3rem;
+
+    .subMenuNav {
+      color: var(--gray-scale-80);
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.875rem;
+
+      .menuItem {
+        padding: 0 1.25rem;
+        cursor: pointer;
+        transition-duration: 0.2s;
+        .point {
+          display: none;
+        }
+      }
+      .menuItem:hover {
+        color: var(--primary-50);
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+        .point {
+          position: absolute;
+          display: block;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          margin-top: 7px;
+          background-color: var(--primary-50);
+        }
+      }
+    }
+  }
+  .iconWrap {
+    .iconItem {
+      border-radius: 50%;
+      // background-color: var(--primary-70);
+    }
+  }
+}
+.subNavItem {
+  display: none;
+  position: absolute;
+  margin-top: 1.2rem;
+  background-color: rgb(255, 255, 255, var(--tw-bg-opacity));
+  border-radius: 4px;
+  border: solid 1px var(--gray-scale-5);
+  color: var(--gray-scale-90);
+
+  li {
+    display: block;
+    padding: 0.5rem;
+    &:hover {
+      color: var(--primary-50);
+    }
+  }
+}
+.menuSelect {
+  // transition: width 3s;
+  // transition-delay: 1s;
+}
+.menuSelect:hover .subNavItem {
+  display: block;
+}
+
+.subMenuNav .subItem:hover {
+  display: block;
+  width: 100%;
+  color: var(--primary-50);
+}
+.subNavItem {
+  display: none;
+}
+
+.subNavItem.active {
+  display: block;
+}
+@media (min-width: 1911px) {
+  .wraps {
+    min-width: 93rem;
+    // min-width: calc(100% - 1rem);  
+  }
+}

@@ -1,0 +1,10 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .header {
+    position: fixed;
+    margin-top: 8.9rem;
+    z-index: 99999;
+  }
+}
