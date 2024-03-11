@@ -16,7 +16,6 @@ import {
   DEC,
 } from "../../until/until";
 
-interface WeatherProps {}
 
 const Weather = () => {
   const [selected, setSelected] = useState(JAN);
@@ -31,7 +30,7 @@ const Weather = () => {
           <div className={"title animate__animated animate__fadeInUp"}>HA GIANG</div>
         </div>
         <div className={styles.imgWrap}>
-          <img className={styles.img} src={selected} />
+          <img className={styles.img} src={selected}   alt="noImage"/>
         </div>
         <div className={styles.buttonWrap}>
           <div
@@ -164,6 +163,7 @@ const Weather = () => {
               <img
                 className={styles.image}
                 src="https://hagiangcheerstours.com/_next/image?url=%2Fimages%2Fsun.svg&w=48&q=75"
+                alt="noImage"
               />
               <p>17 - 18 degree</p>
             </div>
@@ -171,6 +171,7 @@ const Weather = () => {
               <img
                 className={styles.image}
                 src="https://hagiangcheerstours.com/_next/image?url=%2Fimages%2Frain.svg&w=48&q=75"
+                alt="noImage"
               />
               <p>65 - 80 mm</p>
             </div>

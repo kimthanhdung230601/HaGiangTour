@@ -1,10 +1,8 @@
 import { Col, Row, Select } from "antd";
-import Header from "../../components/Header/Header";
 import styles from "./styles.module.scss";
 import "animate.css";
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
-import HomeScrollVideo from "./homeScrollVideo";
 import HomeIntroduce from "./homeIntroduce";
 import OurTrip from "./ourTrip";
 import Weather from "./weather";
@@ -13,7 +11,6 @@ import Traveller from "./traveller";
 import Gallery from "./gallery";
 import Family from "./family";
 import VisibilitySensor from "react-visibility-sensor";
-interface HomeProps {}
 
 const Home = () => {
   const [basic, setBasicBike] = useState(1);

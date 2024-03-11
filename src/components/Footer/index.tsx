@@ -7,7 +7,7 @@ const Footer = () => {
         <Row justify="center">
           <Col span={6}>
             <div className={styles.imgWrapper}>
-              <img src="https://hagiangcheerstours.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhagiangcheerstours%2Fimages%2Ff_auto%2Cq_auto%2Fv1699501517%2Flogo-footer%2Flogo-footer.png%3F_i%3DAA&w=256&q=75" />{" "}
+              <img src="https://hagiangcheerstours.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhagiangcheerstours%2Fimages%2Ff_auto%2Cq_auto%2Fv1699501517%2Flogo-footer%2Flogo-footer.png%3F_i%3DAA&w=256&q=75"   alt="noImage" />{" "}
             </div>
           </Col>
           <Col span={6}>

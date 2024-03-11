@@ -7,8 +7,6 @@ import { Rate, Row, Col } from "antd";
 import { useRef } from "react";
 import "animate.css";
 import { CaretLeftFilled, CaretRightFilled } from "@ant-design/icons";
-interface TravellerProps {}
-
 const Traveller = () => {
   let sliderRef: any = useRef(null);
   const next = () => {
@@ -108,10 +106,12 @@ const Traveller = () => {
             <img
               className={styles.img}
               src="https://hagiangcheerstours.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhagiangcheerstours%2Fimages%2Ff_auto%2Cq_auto%2Fv1699501655%2Fimage-1815-1%2Fimage-1815-1.png%3F_i%3DAA&w=128&q=75"
+              alt="noImage"
             />
             <img
               className={styles.img}
               src="https://hagiangcheerstours.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhagiangcheerstours%2Fimages%2Ff_auto%2Cq_auto%2Fv1699501689%2Fgoogle%2Fgoogle.png%3F_i%3DAA&w=128&q=75"
+              alt="noImage"
             />
           </div>
         </div>

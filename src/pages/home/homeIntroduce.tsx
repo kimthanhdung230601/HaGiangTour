@@ -1,7 +1,5 @@
 import styles from "./styles.module.scss";
-import style from "../../globalStyles/index"
 import "animate.css";
-interface HomeIntroduceProps {}
 
 const HomeIntroduce = () => {
   return (
@@ -21,6 +19,7 @@ const HomeIntroduce = () => {
               <img
                 className={styles.bg}
                 src="https://hagiangcheerstours.com/_next/image?url=%2Fimages%2Fbg-text-cheer.png&w=1480&q=75"
+                alt="noImage"
               />
             </div>
             <div className={`${styles.selectItem} ${styles.select2}`}>
@@ -28,6 +27,7 @@ const HomeIntroduce = () => {
               <img
                 className={styles.bg}
                 src="https://hagiangcheerstours.com/_next/image?url=%2Fimages%2Fbg-text-cheer.png&w=1480&q=75"
+                alt="noImage"
               />
             </div>
             <div className={`${styles.selectItem} ${styles.select3}`}>
@@ -35,6 +35,7 @@ const HomeIntroduce = () => {
               <img
                 className={styles.bg}
                 src="https://hagiangcheerstours.com/_next/image?url=%2Fimages%2Fbg-text-cheer.png&w=1480&q=75"
+                alt="noImage"
               />
             </div>
             <div className={`${styles.selectItem} ${styles.select4}`}>
@@ -42,6 +43,7 @@ const HomeIntroduce = () => {
               <img
                 className={styles.bg}
                 src="https://hagiangcheerstours.com/_next/image?url=%2Fimages%2Fbg-text-cheer.png&w=1480&q=75"
+                alt="noImage"
               />
             </div>
           </div>
@@ -69,7 +71,7 @@ const HomeIntroduce = () => {
         </div>
         <div className={styles.rightColumn}>
           <div className={`${styles.wraperimage} ${"animate__animated animate__fadeInRight "}`}>
-            <img src="https://hagiangcheerstours.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhagiangcheerstours%2Fimages%2Ff_auto%2Cq_auto%2Fv1699501792%2Fmapvn%2Fmapvn.png%3F_i%3DAA&w=1480&q=100" />
+            <img src="https://hagiangcheerstours.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhagiangcheerstours%2Fimages%2Ff_auto%2Cq_auto%2Fv1699501792%2Fmapvn%2Fmapvn.png%3F_i%3DAA&w=1480&q=100"   alt="noImage"/>
           </div>
         </div>
       </div>

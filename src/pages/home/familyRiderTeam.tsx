@@ -8,23 +8,27 @@ import "animate.css";
 import { CaretLeftFilled, CaretRightFilled } from "@ant-design/icons";
 import { teams } from "../../until/until";
 
-interface RiderTeamProps {}
-
 const RiderTeam = () => {
   let sliderRef: any = useRef(null);
   const [activeSlide, setActiveSlide] = useState<any>();
   const [teamDetails, setTeamDetails] = useState<any>();
 
   const next = () => {
-    sliderRef.current.slickNext();
-    const currentTeam = teams[sliderRef.current.slickCurrentSlide()];
-    setTeamDetails(currentTeam);
+    sliderRef.slickNext();
+    const currentSlide = sliderRef.current?.slickCurrentSlide();
+    const currentTeam = teams[currentSlide];
+    if (currentTeam) {
+      setTeamDetails(currentTeam);
+    }
   };
 
   const previous = () => {
-    sliderRef.current.slickPrev();
-    const currentTeam = teams[sliderRef.current.slickCurrentSlide()];
-    setTeamDetails(currentTeam);
+    sliderRef.slickNext();
+    const currentSlide = sliderRef.current?.slickCurrentSlide();
+    const currentTeam = teams[currentSlide];
+    if (currentTeam) {
+      setTeamDetails(currentTeam);
+    }
   };
 
   var settings = {
@@ -35,7 +39,7 @@ const RiderTeam = () => {
     slidesToScroll: 1,
     initialSlide: 0,
 
-    beforeChange: (current: any, next: any) => {
+    beforeChange: (next: any) => {
       setActiveSlide(next);
       setTeamDetails(teams[next]);
     },
@@ -71,18 +75,27 @@ const RiderTeam = () => {
       <div className={styles.RiderWrapper}>
         <Row>
           <Col span={12}>
-            <div className={`${styles.teamDetails} ${"animate__animated animate__fadeInLeft"}`}>
+            <div
+              className={`${
+                styles.teamDetails
+              } ${"animate__animated animate__fadeInLeft"}`}
+            >
               <h2>{teamDetails?.teamName || "KIM THACH TEAM"}</h2>
               <p className={styles.content}>
                 {teamDetails?.teamContent ||
                   "Now, thanks to you who brought tourism to our area, we are provided with new opportunities to earn sustainable incomes, helping our families and our communities to prosper. With every trip experience, we are not just your Easyrider, but also your travel buddies. We are looking forward to meeting you!"}
               </p>
-              <label>Group size: </label>{" "} 
-              <span className={styles.content}>{teamDetails?.teamSize || "9 members"}</span> <br></br>
+              <label>Group size: </label>{" "}
+              <span className={styles.content}>
+                {teamDetails?.teamSize || "9 members"}
+              </span>{" "}
+              <br></br>
               <label>Transport: </label>
               <span className={styles.content}>Motobikes</span> <br></br>
               <label>Trip completed: </label>{" "}
-              <span className={styles.content}>{teamDetails?.teamSize || "134 trips"}</span>
+              <span className={styles.content}>
+                {teamDetails?.teamSize || "134 trips"}
+              </span>
             </div>
           </Col>
           <Col span={12}>
@@ -106,7 +119,11 @@ const RiderTeam = () => {
                       {teams.map((team: any) => {
                         return (
                           <>
-                            <div className={`${styles.block} ${"animate__animated animate__zoomIn"}`}>
+                            <div
+                              className={`${
+                                styles.block
+                              } ${"animate__animated animate__zoomIn"}`}
+                            >
                               <div className={styles.imgBlock}>
                                 <div className={styles.overlay}>
                                   <img

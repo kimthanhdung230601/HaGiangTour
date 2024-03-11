@@ -1,16 +1,9 @@
 import React, { useMemo, useState } from "react";
-import { Button, Checkbox, Divider, Tabs, TabsProps } from "antd";
+import {  Tabs, TabsProps } from "antd";
 import styles from "./styles.module.scss";
 import RiderTeam from "./familyRiderTeam";
 import "animate.css";
 import Specialist from "./familySpecialist";
-import Host from "./familyHost";
-import Leader from "./familyleader";
-
-interface FamilyProps {}
-const CheckboxGroup = Checkbox.Group;
-
-const operations = <Button>Extra Action</Button>;
 
 const OperationsSlot: Record<PositionType, React.ReactNode> = {
   left: (
@@ -21,8 +14,6 @@ const OperationsSlot: Record<PositionType, React.ReactNode> = {
   ),
   right: <></>,
 };
-
-const options = ["left", "right"];
 
 type PositionType = "left" | "right";
 const Family = () => {

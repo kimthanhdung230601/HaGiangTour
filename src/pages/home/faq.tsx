@@ -1,10 +1,8 @@
 import styles from "./styles.module.scss";
 import React from "react";
-import type { MenuProps } from "antd";
 import type { CSSProperties } from "react";
 import "animate.css";
 import type { CollapseProps } from "antd";
-import { theme } from "antd";
 import { Col, Collapse, Row } from "antd";
 import {
   desc1,
@@ -18,16 +16,12 @@ import {
 } from "../../until/until";
 import { useState } from "react";
 
-interface FaqProps {}
-
 const Faq = () => {
   const [selected, setSelected] = useState("");
   const onChange = (value: any) => {
     console.log("value", value);
     setSelected(value);
   };
-  const { token } = theme.useToken();
-
   const panelStyle: React.CSSProperties = {
     borderBottom: "none",
   };
@@ -45,7 +39,6 @@ const Faq = () => {
       ),
       children: <p className={styles.collapses}>{desc1}</p>,
       style: { selected: selected == "1" ? panelStyle : "" },
-      //   style: panelStyle,
     },
     {
       key: "2",

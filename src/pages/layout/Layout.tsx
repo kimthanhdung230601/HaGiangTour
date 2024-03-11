@@ -1,11 +1,9 @@
-import { Outlet } from "react-router";
 import Header from "../../components/Header/Header";
 import styles from "./styles.module.scss";
 import Footer from "../../components/Footer";
 import { useEffect, useState } from "react";
 import "animate.css";
 import Home from "../home";
-interface LayoutProps {}
 
 const Layout = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);

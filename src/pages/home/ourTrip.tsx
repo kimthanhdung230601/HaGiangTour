@@ -1,6 +1,5 @@
 import styles from "./styles.module.scss";
 import "animate.css";
-interface OurTripProps {}
 
 const OurTrip = () => {
   return (
@@ -27,6 +26,7 @@ const OurTrip = () => {
                 <img
                   className={styles.imgs}
                   src={require("../../assets/image/ads2.jpg")}
+                  alt="noImage"
                 />{" "}
               </div>
             </div>
@@ -69,6 +69,7 @@ const OurTrip = () => {
                 <img
                   className={styles.imgs}
                   src={require("../../assets/image/ads2.jpg")}
+                  alt="noImage"
                 />{" "}
               </div>
             </div>
