@@ -11,7 +11,8 @@ import { teams } from "../../until/until";
 const RiderTeam = () => {
   let sliderRef: any = useRef(null);
   const [activeSlide, setActiveSlide] = useState<any>();
-  const [teamDetails, setTeamDetails] = useState<any>();
+  const [teamDetails, setTeamDetails] = useState(teams[0]);
+
 
   const next = () => {
     sliderRef.slickNext();
