@@ -7,8 +7,6 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ConfigProvider } from "antd";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { persistor, store } from "./store";
-import { PersistGate } from "redux-persist/integration/react";
 import vi_VN from "antd/es/locale/vi_VN";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -23,32 +21,28 @@ const queryClient = new QueryClient({
   },
 });
 root.render(
-  <Provider store={store}>
-    <PersistGate persistor={persistor}>
-      <React.StrictMode>
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <ConfigProvider
+        locale={vi_VN}
+        theme={{
+          token: {
+            colorPrimary: "#ee6529",
+            colorPrimaryBorder: "#b34b1e",
+            colorPrimaryHover: "#8c6909",
+          },
+        }}
+      >
         <QueryClientProvider client={queryClient}>
-          <ConfigProvider
-            locale={vi_VN}
-            theme={{
-              token: {
-                colorPrimary:"#ee6529",
-                colorPrimaryBorder: "#b34b1e",
-                colorPrimaryHover: "#8c6909",
-              },
-            }}
-          >
-            <QueryClientProvider client={queryClient}>
-              <BrowserRouter>
-                <Suspense fallback={null}>
-                  <App />
-                </Suspense>
-              </BrowserRouter>
-            </QueryClientProvider>
-          </ConfigProvider>
+          <BrowserRouter>
+            <Suspense fallback={null}>
+              <App />
+            </Suspense>
+          </BrowserRouter>
         </QueryClientProvider>
-      </React.StrictMode>
-    </PersistGate>
-  </Provider>
+      </ConfigProvider>
+    </QueryClientProvider>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
