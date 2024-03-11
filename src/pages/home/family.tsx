@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import { Button, Checkbox, Divider, Tabs, TabsProps } from "antd";
 import styles from "./styles.module.scss";
 import RiderTeam from "./familyRiderTeam";
+import "animate.css";
 import Specialist from "./familySpecialist";
 import Host from "./familyHost";
 import Leader from "./familyleader";
@@ -14,8 +15,8 @@ const operations = <Button>Extra Action</Button>;
 const OperationsSlot: Record<PositionType, React.ReactNode> = {
   left: (
     <div className={styles.titleWrap}>
-      <div className="subTitle">CHEERS</div>
-      <div className="title">FAMILY</div>
+      <div className="subTitle animate__animated animate__fadeInUp">CHEERS</div>
+      <div className="title animate__animated animate__fadeInUp">FAMILY</div>
     </div>
   ),
   right: <></>,

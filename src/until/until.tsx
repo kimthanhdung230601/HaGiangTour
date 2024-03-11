@@ -141,7 +141,7 @@ export const teams = [
     teamContent: "Now, thanks to you who brought tourism to our area, we are provided with new opportunities to earn sustainable incomes, helping our families and our communities to prosper. With every trip experience, we are not just your Easyrider, but also your travel buddies. We are looking forward to meeting you!",
     teamSize: "15 members",
     teamTrip: "154 trips",
-    scr: "https://hagiangcheerstours.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhagiangcheerstours%2Fimages%2Ff_auto%2Cq_auto%2Fv1699501635%2F889cc912c6df218178ce%2F889cc912c6df218178ce.jpg%3F_i%3DAA&w=992&q=75",
+    scr: "https://hagiangcheerstours.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhagiangcheerstours%2Fimages%2Ff_auto%2Cq_auto%2Fv1699501613%2F6d4d0cb72e77f029a966%2F6d4d0cb72e77f029a966.jpg%3F_i%3DAA&w=992&q=75",
   },
   {
     teamName: "DAO TEAM",
@@ -151,10 +151,10 @@ export const teams = [
     scr: "https://hagiangcheerstours.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhagiangcheerstours%2Fimages%2Ff_auto%2Cq_auto%2Fv1699501605%2Ffba597ccaf0c7152281d%2Ffba597ccaf0c7152281d.jpg%3F_i%3DAA&w=992&q=75",
   },
   {
-    teamName: "",
-    teamContent: "",
-    teamSize: "",
-    teamTrip: "",
-    scr: "https://hagiangcheerstours.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhagiangcheerstours%2Fimages%2Ff_auto%2Cq_auto%2Fv1699501613%2F6d4d0cb72e77f029a966%2F6d4d0cb72e77f029a966.jpg%3F_i%3DAA&w=992&q=75",
+    teamName: "H’MONG TEAM",
+    teamContent: "Hi guys, we are the Easy Rider crew from the H'Mong ethnic minority, who live in the breathtaking highlands of Ha Giang at an elevation of between 800 and 1700 meters above sea level. Fun fact is that our job used to be farming every day. Now, thanks to you who brought tourism to our area, we are provided with new opportunities to earn sustainable incomes, helping our families and our communities to prosper.",
+    teamSize: "15 members",
+    teamTrip: "154 trips",
+    scr: "https://hagiangcheerstours.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhagiangcheerstours%2Fimages%2Ff_auto%2Cq_auto%2Fv1699501635%2F889cc912c6df218178ce%2F889cc912c6df218178ce.jpg%3F_i%3DAA&w=992&q=75",
   },
 ];

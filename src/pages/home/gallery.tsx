@@ -1,4 +1,6 @@
 import styles from "./styles.module.scss";
+import "animate.css";
+
 interface GalleryProps {}
 
 const Gallery = () => {
@@ -6,10 +8,10 @@ const Gallery = () => {
     <>
       <div className={styles.wrapper}>
         <div className={styles.titleWrap}>
-          <p className="subTitle">DISCOVER</p>
-          <p className="title">THE GALLERY</p>
+          <p className="subTitle  animate__animated animate__fadeInUp">DISCOVER</p>
+          <p className="title  animate__animated animate__fadeInUp ">THE GALLERY</p>
         </div>
-        <div className={styles.listWrap}>
+        <div className={`${styles.listWrap} ${" animate__animated animate__fadeInUp"}`}>
           <div className={styles.listItem}>
             <div className={styles.imgWrap}>
               <img

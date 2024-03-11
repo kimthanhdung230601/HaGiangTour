@@ -1,4 +1,5 @@
 import styles from "./styles.module.scss";
+import "animate.css";
 interface OurTripProps {}
 
 const OurTrip = () => {
@@ -6,10 +7,10 @@ const OurTrip = () => {
     <>
       <div className={styles.wrapper}>
         <div className={styles.titleWrapper}>
-          <h3 className={"subTitle"}>out </h3>
-          <p className={"title"}> great trips </p>
+          <h3 className={"subTitle animate__animated animate__fadeInUp"}>out </h3>
+          <p className={"title animate__animated animate__fadeInUp"}> great trips </p>
         </div>
-        <div className={styles.contentsWrapper}>
+        <div className={`${styles.contentsWrapper} ${"animate__animated animate__fadeInUp"}`}>
           <div className={styles.contents}>
             <div className={styles.imgWrapper}>
               {" "}

@@ -253,6 +253,9 @@
     background-size: cover;
   }
   .titleWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     .title1 {
       text-align: center;
       font-size: 1rem;
@@ -616,10 +619,10 @@
   .wrapper {
     margin-top: 7rem;
     padding: 0 3.2rem;
-    .titleWrap{
+    .titleWrap {
       margin-bottom: 2rem;
     }
-    .listItem{
+    .listItem {
       display: flex;
       justify-content: space-around;
     }
@@ -673,9 +676,9 @@
     }
   }
 }
-.homeFamily{
-  .wrapper{
-    padding: 0 2rem;
+.homeFamily {
+  .wrapper {
+    padding: 0 3.2rem;
   }
 }
 @media (max-width: 767px) {

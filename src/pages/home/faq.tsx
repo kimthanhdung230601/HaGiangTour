@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import React from "react";
 import type { MenuProps } from "antd";
 import type { CSSProperties } from "react";
-
+import "animate.css";
 import type { CollapseProps } from "antd";
 import { theme } from "antd";
 import { Col, Collapse, Row } from "antd";
@@ -138,8 +138,8 @@ const Faq = () => {
           <Col flex={2}>
             {" "}
             <div className={styles.titleWraper}>
-              <div className="subTitle">FAQ ABOUT</div>
-              <div className="title">the loop</div>
+              <div className="subTitle animate__animated animate__fadeInUp">FAQ ABOUT</div>
+              <div className="title animate__animated animate__fadeInUp">the loop</div>
               <div className="btnPrimary">BOOK NOW</div>
             </div>
           </Col>
@@ -147,9 +147,9 @@ const Faq = () => {
             {" "}
             <div className={styles.block}>
               <div className={styles.blockMenu}>
-                <div className={styles.descWrap}>
-                  <p className={styles.title}>NATURE</p>
-                  <span className={styles.desc}>
+                <div className={`${styles.descWrap}`}>
+                  <p className={`${styles.title} ${"animate__animated animate__fadeInRight"}`}>NATURE</p>
+                  <span className={`${styles.desc} ${"animate__animated animate__fadeInRight"}`}>
                     Nature is not only all that visible to the eyes, it also
                     includes the inner picture of the soul.
                   </span>
@@ -166,8 +166,8 @@ const Faq = () => {
               <div className={styles.blockMenu}>
                 {" "}
                 <div className={styles.descWrap}>
-                  <p className={styles.title}>JOURNEY</p>
-                  <span className={styles.desc}>
+                  <p className={`${styles.title} ${"animate__animated animate__fadeInRight"}`}>JOURNEY</p>
+                  <span className={`${styles.desc} ${"animate__animated animate__fadeInRight"}`}>
                     Today is a beautiful day and Happiness isn’t a destination,
                     it’s a journey we are on.
                   </span>

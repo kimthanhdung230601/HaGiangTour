@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "animate.css";
 import styles from "./styles.module.scss";
 import {
   JAN,
@@ -26,8 +27,8 @@ const Weather = () => {
     <>
       <div className={styles.wrapper}>
         <div className={styles.titleWrap}>
-          <div className={"subTitle"}>WEATHER FORECAST OF</div>
-          <div className={"title"}>HA GIANG</div>
+          <div className={"subTitle animate__animated animate__fadeInUp"}>WEATHER FORECAST OF</div>
+          <div className={"title animate__animated animate__fadeInUp"}>HA GIANG</div>
         </div>
         <div className={styles.imgWrap}>
           <img className={styles.img} src={selected} />

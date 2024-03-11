@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "animate.css";
 import { CaretLeftFilled, CaretRightFilled } from "@ant-design/icons";
 import { teams } from "../../until/until";
 
@@ -11,23 +12,32 @@ interface RiderTeamProps {}
 
 const RiderTeam = () => {
   let sliderRef: any = useRef(null);
+  const [activeSlide, setActiveSlide] = useState<any>();
+  const [teamDetails, setTeamDetails] = useState<any>();
+
   const next = () => {
-    sliderRef.slickNext();
+    sliderRef.current.slickNext();
+    const currentTeam = teams[sliderRef.current.slickCurrentSlide()];
+    setTeamDetails(currentTeam);
   };
+
   const previous = () => {
-    sliderRef.slickPrev();
+    sliderRef.current.slickPrev();
+    const currentTeam = teams[sliderRef.current.slickCurrentSlide()];
+    setTeamDetails(currentTeam);
   };
-  const [activeSlide, setActiveSlide] = useState(0);
 
   var settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-    beforeChange: (next: any) => {
+
+    beforeChange: (current: any, next: any) => {
       setActiveSlide(next);
+      setTeamDetails(teams[next]);
     },
     responsive: [
       {
@@ -61,17 +71,27 @@ const RiderTeam = () => {
       <div className={styles.RiderWrapper}>
         <Row>
           <Col span={12}>
-            <p>
-              BeforeChange {"=>"} activeSlide: <strong>{activeSlide}</strong>
-            </p>
+            <div className={`${styles.teamDetails} ${"animate__animated animate__fadeInLeft"}`}>
+              <h2>{teamDetails?.teamName || "KIM THACH TEAM"}</h2>
+              <p className={styles.content}>
+                {teamDetails?.teamContent ||
+                  "Now, thanks to you who brought tourism to our area, we are provided with new opportunities to earn sustainable incomes, helping our families and our communities to prosper. With every trip experience, we are not just your Easyrider, but also your travel buddies. We are looking forward to meeting you!"}
+              </p>
+              <label>Group size: </label>{" "} 
+              <span className={styles.content}>{teamDetails?.teamSize || "9 members"}</span> <br></br>
+              <label>Transport: </label>
+              <span className={styles.content}>Motobikes</span> <br></br>
+              <label>Trip completed: </label>{" "}
+              <span className={styles.content}>{teamDetails?.teamSize || "134 trips"}</span>
+            </div>
           </Col>
           <Col span={12}>
             {" "}
             <div className={styles.slickWrap}>
               <Row>
-                <Col span={1}>
+                <Col className={styles.btnIcon} span={1}>
                   <div className={styles.button} onClick={previous}>
-                    <CaretLeftFilled className={styles.item} />
+                    <CaretLeftFilled className={styles.itemIcon} />
                   </div>
                 </Col>
                 <Col span={22}>
@@ -86,7 +106,7 @@ const RiderTeam = () => {
                       {teams.map((team: any) => {
                         return (
                           <>
-                            <div className={styles.block}>
+                            <div className={`${styles.block} ${"animate__animated animate__zoomIn"}`}>
                               <div className={styles.imgBlock}>
                                 <div className={styles.overlay}>
                                   <img
@@ -94,16 +114,6 @@ const RiderTeam = () => {
                                     src={team.scr}
                                     alt={team.teamName}
                                   />
-                                  {/* <div className={styles.infor}>
-                                    <div className={styles.inforBlock}>
-                                      <div className={styles.decs}>
-                                        {team.teamName}
-                                      </div>
-                                      <div className={styles.obj}>
-                                        {team.obj}
-                                      </div>
-                                    </div>
-                                  </div> */}
                                 </div>
                               </div>
                             </div>
@@ -113,10 +123,10 @@ const RiderTeam = () => {
                     </Slider>
                   </div>
                 </Col>
-                <Col span={1}>
+                <Col span={1} className={styles.btnIcon}>
                   {" "}
-                  <div className={styles.button} onClick={next}>
-                    <CaretRightFilled className={styles.item} />
+                  <div className={styles.buttonIcon} onClick={next}>
+                    <CaretRightFilled className={styles.itemIcon} />
                   </div>
                 </Col>
               </Row>{" "}

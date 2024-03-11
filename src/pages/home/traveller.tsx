@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { rates } from "../../until/until";
 import { Rate, Row, Col } from "antd";
 import { useRef } from "react";
+import "animate.css";
 import { CaretLeftFilled, CaretRightFilled } from "@ant-design/icons";
 interface TravellerProps {}
 
@@ -55,8 +56,8 @@ const Traveller = () => {
     <>
       <div className={styles.wrapper}>
         <div className={styles.titleWrap}>
-          <p className="subTitle">FROM OUR</p>
-          <p className="title">TRAVELLERS</p>
+          <p className="subTitle animate__animated animate__fadeInUp">FROM OUR</p>
+          <p className="title animate__animated animate__fadeInUp">TRAVELLERS</p>
         </div>
         <div className={styles.slickWrap}>
           <Row>

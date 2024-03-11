@@ -93,6 +93,17 @@ const Specialist = () => {
                               </div>
                             </div>
                           </div>
+                          <div className={styles.overlays}>
+                            <div className={styles.overlaysName}>
+                              {specialis.name}
+                            </div>
+                            <div className={styles.overlaysObj}>
+                              {specialis.obj}
+                            </div>
+                            <div className={styles.overlaysDecs}>
+                              {specialis.desc}
+                            </div>
+                          </div>
                         </div>
                       </>
                     );
