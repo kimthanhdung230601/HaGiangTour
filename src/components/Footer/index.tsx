@@ -1,7 +1,5 @@
 import { Col, Row } from "antd";
 import styles from "./styles.module.scss";
-interface FooterProps {}
-
 const Footer = () => {
   return (
     <>
